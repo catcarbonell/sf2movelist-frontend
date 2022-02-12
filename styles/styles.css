@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(75,108,189,1) 100%);
+  font-family: 'Courier Prime', monospace;
+}
+h1 {
+  color: #fff;
+}
+.div--container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div--container-characters {
+  display: flex;
+  flex-direction: row;
+}
+
+.div--details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #222;
+  background-color: #fff;
+  padding: 1.3rem;
+}
+.div--details h1 {
+  color: #222;
+}
+
+.div--card-character {
+  width: 150px;
+  border: 5px solid #fff;
+  margin: 0.5rem;
+  padding: 0 1.2rem;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+}
+
+.div--card-character:hover {
+  background-color: #ffee5a;
+  color: #333;
+}
+
+.button--home {
+  border: 3px solid #333;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 5px;
+  font-family: 'Courier Prime', monospace;
+}
+
+.button--home:hover {
+  background-color: #ffee5a;
+  cursor: pointer;
+}
