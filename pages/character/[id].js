@@ -12,10 +12,11 @@ const fullCharacter = ({ character }) => {
       <div className="div--details">
         <h1>{character.attributes.name}</h1>
         <h3>Type: {character.attributes.type} </h3>
-          <img
-              src={`http://localhost:1337${character.attributes.pic.data.attributes.url}`}
+          <Image
+              src={`${process.env.NEXT_PUBLIC_PORT}${character.attributes.pic.data.attributes.url}`}
               alt={character.attributes.name}
-              height="25%"
+              height="200%"
+              width="200%"
           />
           <h3>Special Moves</h3>
           <div>
@@ -42,7 +43,7 @@ const fullCharacter = ({ character }) => {
 export default fullCharacter;
 
 export async function getStaticPaths() {
-  const res = await fetch('http://localhost:1337/api/characters?populate=*');
+  const res = await fetch(`http://localhost:1337/api/characters?populate=*`);
   const characters = await res.json();
   return {
     paths: characters.data.map((character) => ({

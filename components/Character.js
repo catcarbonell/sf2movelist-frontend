@@ -4,7 +4,7 @@ const Character = ({character}) => {
   return (
     <div className="div--card-character">
       <Image 
-          src={character.attributes.photo} 
+          src={`${process.env.NEXT_PUBLIC_PORT}${character.attributes.pic.data.attributes.url}`}
           alt={character.attributes.name} 
           className="character-image"
           width="100%"

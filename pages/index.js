@@ -45,7 +45,7 @@ export default function Home({ characters }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:1337/api/characters');
+  const res = await fetch('http://localhost:1337/api/characters?populate=*');
 
   const characters = await res.json();
  
